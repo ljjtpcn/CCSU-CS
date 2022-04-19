@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Oct 30 23:41:01 2021
+Quartus II Version : 9.0 Build 184 04/29/2009 SP 1 SJ Web Edition
+Revision Name : ram_io
+Top-level Entity Name : ram_io
+Family : Cyclone II
+Total logic elements : 2
+    Total combinational functions : 2
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 20
+Total virtual pins : 0
+Total memory bits : 2,048
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

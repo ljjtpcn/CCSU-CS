@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Oct 15 16:15:25 2021
+Quartus II Version : 9.0 Build 184 04/29/2009 SP 1 SJ Web Edition
+Revision Name : ccq
+Top-level Entity Name : ccq
+Family : Cyclone II
+Total logic elements : 38
+    Total combinational functions : 38
+    Dedicated logic registers : 16
+Total registers : 16
+Total pins : 26
+Total virtual pins : 0
+Total memory bits : 2,048
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

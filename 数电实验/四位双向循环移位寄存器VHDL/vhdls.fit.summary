@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Nov 03 21:25:03 2021
+Quartus II Version : 9.0 Build 184 04/29/2009 SP 1 SJ Web Edition
+Revision Name : vhdls
+Top-level Entity Name : vhdls
+Family : Cyclone II
+Device : EP2C5T144C8
+Timing Models : Final
+Total logic elements : 5 / 4,608 ( < 1 % )
+    Total combinational functions : 5 / 4,608 ( < 1 % )
+    Dedicated logic registers : 4 / 4,608 ( < 1 % )
+Total registers : 4
+Total pins : 12 / 89 ( 13 % )
+Total virtual pins : 0
+Total memory bits : 0 / 119,808 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 26 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

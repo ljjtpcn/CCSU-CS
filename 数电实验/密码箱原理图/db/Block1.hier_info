@@ -1,0 +1,11 @@
+|Block1
+Z1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+B => inst.IN1
+C => inst.IN2
+D => inst.IN3
+E => inst1.IN1
+E => inst2.IN1
+Z2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+

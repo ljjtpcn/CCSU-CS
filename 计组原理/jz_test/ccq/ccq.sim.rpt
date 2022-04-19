@@ -1,0 +1,302 @@
+Simulator report for ccq
+Tue Oct 19 14:39:34 2021
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. |ccq|ram_io:inst|lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_sca1:auto_generated|ALTSYNCRAM
+  6. Coverage Summary
+  7. Complete 1/0-Value Coverage
+  8. Missing 1-Value Coverage
+  9. Missing 0-Value Coverage
+ 10. Simulator INI Usage
+ 11. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 ms       ;
+; Simulation Netlist Size     ; 91 nodes     ;
+; Simulation Coverage         ;      67.62 % ;
+; Total Number of Transitions ; 830          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C5T144C8  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++-------------------------------------------------------------------------------------------------------------+
+; |ccq|ram_io:inst|lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_sca1:auto_generated|ALTSYNCRAM ;
++-------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II to view the memory report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      67.62 % ;
+; Total nodes checked                                 ; 91           ;
+; Total output ports checked                          ; 105          ;
+; Total output ports with complete 1/0-value coverage ; 71           ;
+; Total output ports with no 1/0-value coverage       ; 28           ;
+; Total output ports with no 1-value coverage         ; 28           ;
+; Total output ports with no 0-value coverage         ; 34           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                                                ;
++---------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                     ; Output Port Name                                                                                        ; Output Port Type ;
++---------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+; |ccq|ram_io:inst|lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_sca1:auto_generated|ram_block1a0 ; |ccq|ram_io:inst|lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_sca1:auto_generated|q_a[0] ; portadataout0    ;
+; |ccq|ram_io:inst|lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_sca1:auto_generated|ram_block1a0 ; |ccq|ram_io:inst|lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_sca1:auto_generated|q_a[1] ; portadataout1    ;
+; |ccq|ram_io:inst|lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_sca1:auto_generated|ram_block1a0 ; |ccq|ram_io:inst|lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_sca1:auto_generated|q_a[4] ; portadataout4    ;
+; |ccq|ram_io:inst|lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_sca1:auto_generated|ram_block1a0 ; |ccq|ram_io:inst|lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_sca1:auto_generated|q_a[5] ; portadataout5    ;
+; |ccq|sw_pc_ar:inst1|pc[0]                                                                                     ; |ccq|sw_pc_ar:inst1|pc[0]                                                                               ; regout           ;
+; |ccq|sw_pc_ar:inst1|pc[0]~24                                                                                  ; |ccq|sw_pc_ar:inst1|pc[0]~24                                                                            ; combout          ;
+; |ccq|sw_pc_ar:inst1|pc[0]~24                                                                                  ; |ccq|sw_pc_ar:inst1|pc[0]~25                                                                            ; cout             ;
+; |ccq|sw_pc_ar:inst1|pc[1]~26                                                                                  ; |ccq|sw_pc_ar:inst1|pc[1]~26                                                                            ; combout          ;
+; |ccq|sw_pc_ar:inst1|bus_reg[7]~8                                                                              ; |ccq|sw_pc_ar:inst1|bus_reg[7]~8                                                                        ; combout          ;
+; |ccq|sw_pc_ar:inst1|bus_reg[7]~9                                                                              ; |ccq|sw_pc_ar:inst1|bus_reg[7]~9                                                                        ; combout          ;
+; |ccq|ram_io:inst|lpm_ram_io:inst|datatri[7]~0                                                                 ; |ccq|ram_io:inst|lpm_ram_io:inst|datatri[7]~0                                                           ; combout          ;
+; |ccq|sw_pc_ar:inst1|d~16                                                                                      ; |ccq|sw_pc_ar:inst1|d~16                                                                                ; combout          ;
+; |ccq|ram_io:inst|lpm_ram_io:inst|datatri[7]~9                                                                 ; |ccq|ram_io:inst|lpm_ram_io:inst|datatri[7]~9                                                           ; combout          ;
+; |ccq|ram_io:inst|lpm_ram_io:inst|datatri[7]~10                                                                ; |ccq|ram_io:inst|lpm_ram_io:inst|datatri[7]~10                                                          ; combout          ;
+; |ccq|sw_pc_ar:inst1|bus_reg[6]~10                                                                             ; |ccq|sw_pc_ar:inst1|bus_reg[6]~10                                                                       ; combout          ;
+; |ccq|sw_pc_ar:inst1|bus_reg[6]~11                                                                             ; |ccq|sw_pc_ar:inst1|bus_reg[6]~11                                                                       ; combout          ;
+; |ccq|ram_io:inst|lpm_ram_io:inst|datatri[6]~11                                                                ; |ccq|ram_io:inst|lpm_ram_io:inst|datatri[6]~11                                                          ; combout          ;
+; |ccq|sw_pc_ar:inst1|bus_reg[5]~12                                                                             ; |ccq|sw_pc_ar:inst1|bus_reg[5]~12                                                                       ; combout          ;
+; |ccq|sw_pc_ar:inst1|bus_reg[5]~13                                                                             ; |ccq|sw_pc_ar:inst1|bus_reg[5]~13                                                                       ; combout          ;
+; |ccq|ram_io:inst|lpm_ram_io:inst|datatri[5]~12                                                                ; |ccq|ram_io:inst|lpm_ram_io:inst|datatri[5]~12                                                          ; combout          ;
+; |ccq|sw_pc_ar:inst1|bus_reg[4]~14                                                                             ; |ccq|sw_pc_ar:inst1|bus_reg[4]~14                                                                       ; combout          ;
+; |ccq|sw_pc_ar:inst1|bus_reg[4]~15                                                                             ; |ccq|sw_pc_ar:inst1|bus_reg[4]~15                                                                       ; combout          ;
+; |ccq|ram_io:inst|lpm_ram_io:inst|datatri[4]~13                                                                ; |ccq|ram_io:inst|lpm_ram_io:inst|datatri[4]~13                                                          ; combout          ;
+; |ccq|sw_pc_ar:inst1|bus_reg[3]~16                                                                             ; |ccq|sw_pc_ar:inst1|bus_reg[3]~16                                                                       ; combout          ;
+; |ccq|sw_pc_ar:inst1|bus_reg[3]~17                                                                             ; |ccq|sw_pc_ar:inst1|bus_reg[3]~17                                                                       ; combout          ;
+; |ccq|ram_io:inst|lpm_ram_io:inst|datatri[3]~14                                                                ; |ccq|ram_io:inst|lpm_ram_io:inst|datatri[3]~14                                                          ; combout          ;
+; |ccq|sw_pc_ar:inst1|bus_reg[2]~18                                                                             ; |ccq|sw_pc_ar:inst1|bus_reg[2]~18                                                                       ; combout          ;
+; |ccq|sw_pc_ar:inst1|bus_reg[2]~19                                                                             ; |ccq|sw_pc_ar:inst1|bus_reg[2]~19                                                                       ; combout          ;
+; |ccq|ram_io:inst|lpm_ram_io:inst|datatri[2]~15                                                                ; |ccq|ram_io:inst|lpm_ram_io:inst|datatri[2]~15                                                          ; combout          ;
+; |ccq|sw_pc_ar:inst1|bus_reg[1]~20                                                                             ; |ccq|sw_pc_ar:inst1|bus_reg[1]~20                                                                       ; combout          ;
+; |ccq|sw_pc_ar:inst1|bus_reg[1]~21                                                                             ; |ccq|sw_pc_ar:inst1|bus_reg[1]~21                                                                       ; combout          ;
+; |ccq|ram_io:inst|lpm_ram_io:inst|datatri[1]~16                                                                ; |ccq|ram_io:inst|lpm_ram_io:inst|datatri[1]~16                                                          ; combout          ;
+; |ccq|sw_pc_ar:inst1|bus_reg[0]~22                                                                             ; |ccq|sw_pc_ar:inst1|bus_reg[0]~22                                                                       ; combout          ;
+; |ccq|sw_pc_ar:inst1|bus_reg[0]~23                                                                             ; |ccq|sw_pc_ar:inst1|bus_reg[0]~23                                                                       ; combout          ;
+; |ccq|ram_io:inst|lpm_ram_io:inst|datatri[0]~17                                                                ; |ccq|ram_io:inst|lpm_ram_io:inst|datatri[0]~17                                                          ; combout          ;
+; |ccq|sw_pc_ar:inst1|seq2~1                                                                                    ; |ccq|sw_pc_ar:inst1|seq2~1                                                                              ; combout          ;
+; |ccq|sw_pc_ar:inst1|seq2~0                                                                                    ; |ccq|sw_pc_ar:inst1|seq2~0                                                                              ; combout          ;
+; |ccq|ram_io:inst|lpm_ram_io:inst|_~3                                                                          ; |ccq|ram_io:inst|lpm_ram_io:inst|_~3                                                                    ; combout          ;
+; |ccq|sw_pc_ar:inst1|ar[0]                                                                                     ; |ccq|sw_pc_ar:inst1|ar[0]                                                                               ; regout           ;
+; |ccq|sw_pc_ar:inst1|ar[1]                                                                                     ; |ccq|sw_pc_ar:inst1|ar[1]                                                                               ; regout           ;
+; |ccq|d[7]                                                                                                     ; |ccq|d~0                                                                                                ; combout          ;
+; |ccq|d[7]                                                                                                     ; |ccq|d[7]~output                                                                                        ; padio            ;
+; |ccq|d[6]                                                                                                     ; |ccq|d~1                                                                                                ; combout          ;
+; |ccq|d[6]                                                                                                     ; |ccq|d[6]~output                                                                                        ; padio            ;
+; |ccq|d[5]                                                                                                     ; |ccq|d~2                                                                                                ; combout          ;
+; |ccq|d[5]                                                                                                     ; |ccq|d[5]~output                                                                                        ; padio            ;
+; |ccq|d[4]                                                                                                     ; |ccq|d~3                                                                                                ; combout          ;
+; |ccq|d[4]                                                                                                     ; |ccq|d[4]~output                                                                                        ; padio            ;
+; |ccq|d[3]                                                                                                     ; |ccq|d~4                                                                                                ; combout          ;
+; |ccq|d[3]                                                                                                     ; |ccq|d[3]~output                                                                                        ; padio            ;
+; |ccq|d[2]                                                                                                     ; |ccq|d~5                                                                                                ; combout          ;
+; |ccq|d[2]                                                                                                     ; |ccq|d[2]~output                                                                                        ; padio            ;
+; |ccq|d[1]                                                                                                     ; |ccq|d~6                                                                                                ; combout          ;
+; |ccq|d[1]                                                                                                     ; |ccq|d[1]~output                                                                                        ; padio            ;
+; |ccq|d[0]                                                                                                     ; |ccq|d~7                                                                                                ; combout          ;
+; |ccq|d[0]                                                                                                     ; |ccq|d[0]~output                                                                                        ; padio            ;
+; |ccq|pc_bus                                                                                                   ; |ccq|pc_bus~corein                                                                                      ; combout          ;
+; |ccq|inputd[7]                                                                                                ; |ccq|inputd[7]~corein                                                                                   ; combout          ;
+; |ccq|sw_bus                                                                                                   ; |ccq|sw_bus~corein                                                                                      ; combout          ;
+; |ccq|rd                                                                                                       ; |ccq|rd~corein                                                                                          ; combout          ;
+; |ccq|inputd[6]                                                                                                ; |ccq|inputd[6]~corein                                                                                   ; combout          ;
+; |ccq|inputd[3]                                                                                                ; |ccq|inputd[3]~corein                                                                                   ; combout          ;
+; |ccq|inputd[2]                                                                                                ; |ccq|inputd[2]~corein                                                                                   ; combout          ;
+; |ccq|inputd[1]                                                                                                ; |ccq|inputd[1]~corein                                                                                   ; combout          ;
+; |ccq|inputd[0]                                                                                                ; |ccq|inputd[0]~corein                                                                                   ; combout          ;
+; |ccq|clk_cdu                                                                                                  ; |ccq|clk_cdu~corein                                                                                     ; combout          ;
+; |ccq|pcld                                                                                                     ; |ccq|pcld~corein                                                                                        ; combout          ;
+; |ccq|pcen                                                                                                     ; |ccq|pcen~corein                                                                                        ; combout          ;
+; |ccq|we                                                                                                       ; |ccq|we~corein                                                                                          ; combout          ;
+; |ccq|ldar                                                                                                     ; |ccq|ldar~corein                                                                                        ; combout          ;
+; |ccq|clk_cdu~clkctrl                                                                                          ; |ccq|clk_cdu~clkctrl                                                                                    ; outclk           ;
++---------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                       ;
++------------------------------+------------------------------+------------------+
+; Node Name                    ; Output Port Name             ; Output Port Type ;
++------------------------------+------------------------------+------------------+
+; |ccq|sw_pc_ar:inst1|pc[7]    ; |ccq|sw_pc_ar:inst1|pc[7]    ; regout           ;
+; |ccq|sw_pc_ar:inst1|pc[6]    ; |ccq|sw_pc_ar:inst1|pc[6]    ; regout           ;
+; |ccq|sw_pc_ar:inst1|pc[5]    ; |ccq|sw_pc_ar:inst1|pc[5]    ; regout           ;
+; |ccq|sw_pc_ar:inst1|pc[4]    ; |ccq|sw_pc_ar:inst1|pc[4]    ; regout           ;
+; |ccq|sw_pc_ar:inst1|pc[3]    ; |ccq|sw_pc_ar:inst1|pc[3]    ; regout           ;
+; |ccq|sw_pc_ar:inst1|pc[2]    ; |ccq|sw_pc_ar:inst1|pc[2]    ; regout           ;
+; |ccq|sw_pc_ar:inst1|pc[1]~26 ; |ccq|sw_pc_ar:inst1|pc[1]~27 ; cout             ;
+; |ccq|sw_pc_ar:inst1|pc[2]~28 ; |ccq|sw_pc_ar:inst1|pc[2]~28 ; combout          ;
+; |ccq|sw_pc_ar:inst1|pc[2]~28 ; |ccq|sw_pc_ar:inst1|pc[2]~29 ; cout             ;
+; |ccq|sw_pc_ar:inst1|pc[3]~30 ; |ccq|sw_pc_ar:inst1|pc[3]~30 ; combout          ;
+; |ccq|sw_pc_ar:inst1|pc[3]~30 ; |ccq|sw_pc_ar:inst1|pc[3]~31 ; cout             ;
+; |ccq|sw_pc_ar:inst1|pc[4]~32 ; |ccq|sw_pc_ar:inst1|pc[4]~32 ; combout          ;
+; |ccq|sw_pc_ar:inst1|pc[4]~32 ; |ccq|sw_pc_ar:inst1|pc[4]~33 ; cout             ;
+; |ccq|sw_pc_ar:inst1|pc[5]~34 ; |ccq|sw_pc_ar:inst1|pc[5]~34 ; combout          ;
+; |ccq|sw_pc_ar:inst1|pc[5]~34 ; |ccq|sw_pc_ar:inst1|pc[5]~35 ; cout             ;
+; |ccq|sw_pc_ar:inst1|pc[6]~36 ; |ccq|sw_pc_ar:inst1|pc[6]~36 ; combout          ;
+; |ccq|sw_pc_ar:inst1|pc[6]~36 ; |ccq|sw_pc_ar:inst1|pc[6]~37 ; cout             ;
+; |ccq|sw_pc_ar:inst1|pc[7]~38 ; |ccq|sw_pc_ar:inst1|pc[7]~38 ; combout          ;
+; |ccq|sw_pc_ar:inst1|ar[3]    ; |ccq|sw_pc_ar:inst1|ar[3]    ; regout           ;
+; |ccq|sw_pc_ar:inst1|ar[4]    ; |ccq|sw_pc_ar:inst1|ar[4]    ; regout           ;
+; |ccq|sw_pc_ar:inst1|ar[5]    ; |ccq|sw_pc_ar:inst1|ar[5]    ; regout           ;
+; |ccq|sw_pc_ar:inst1|ar[6]    ; |ccq|sw_pc_ar:inst1|ar[6]    ; regout           ;
+; |ccq|sw_pc_ar:inst1|ar[7]    ; |ccq|sw_pc_ar:inst1|ar[7]    ; regout           ;
+; |ccq|memenab                 ; |ccq|memenab~corein          ; combout          ;
+; |ccq|inputd[5]               ; |ccq|inputd[5]~corein        ; combout          ;
+; |ccq|inputd[4]               ; |ccq|inputd[4]~corein        ; combout          ;
+; |ccq|pcclr                   ; |ccq|pcclr~corein            ; combout          ;
+; |ccq|pcclr~clkctrl           ; |ccq|pcclr~clkctrl           ; outclk           ;
++------------------------------+------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                                   ;
++---------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                     ; Output Port Name                                                                                        ; Output Port Type ;
++---------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+; |ccq|sw_pc_ar:inst1|pc[7]                                                                                     ; |ccq|sw_pc_ar:inst1|pc[7]                                                                               ; regout           ;
+; |ccq|sw_pc_ar:inst1|pc[6]                                                                                     ; |ccq|sw_pc_ar:inst1|pc[6]                                                                               ; regout           ;
+; |ccq|sw_pc_ar:inst1|pc[5]                                                                                     ; |ccq|sw_pc_ar:inst1|pc[5]                                                                               ; regout           ;
+; |ccq|sw_pc_ar:inst1|pc[4]                                                                                     ; |ccq|sw_pc_ar:inst1|pc[4]                                                                               ; regout           ;
+; |ccq|sw_pc_ar:inst1|pc[3]                                                                                     ; |ccq|sw_pc_ar:inst1|pc[3]                                                                               ; regout           ;
+; |ccq|sw_pc_ar:inst1|pc[2]                                                                                     ; |ccq|sw_pc_ar:inst1|pc[2]                                                                               ; regout           ;
+; |ccq|sw_pc_ar:inst1|pc[1]                                                                                     ; |ccq|sw_pc_ar:inst1|pc[1]                                                                               ; regout           ;
+; |ccq|ram_io:inst|lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_sca1:auto_generated|ram_block1a0 ; |ccq|ram_io:inst|lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_sca1:auto_generated|q_a[2] ; portadataout2    ;
+; |ccq|ram_io:inst|lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_sca1:auto_generated|ram_block1a0 ; |ccq|ram_io:inst|lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_sca1:auto_generated|q_a[3] ; portadataout3    ;
+; |ccq|ram_io:inst|lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_sca1:auto_generated|ram_block1a0 ; |ccq|ram_io:inst|lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_sca1:auto_generated|q_a[6] ; portadataout6    ;
+; |ccq|ram_io:inst|lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_sca1:auto_generated|ram_block1a0 ; |ccq|ram_io:inst|lpm_ram_io:inst|altram:sram|altsyncram:ram_block|altsyncram_sca1:auto_generated|q_a[7] ; portadataout7    ;
+; |ccq|sw_pc_ar:inst1|pc[1]~26                                                                                  ; |ccq|sw_pc_ar:inst1|pc[1]~27                                                                            ; cout             ;
+; |ccq|sw_pc_ar:inst1|pc[2]~28                                                                                  ; |ccq|sw_pc_ar:inst1|pc[2]~28                                                                            ; combout          ;
+; |ccq|sw_pc_ar:inst1|pc[2]~28                                                                                  ; |ccq|sw_pc_ar:inst1|pc[2]~29                                                                            ; cout             ;
+; |ccq|sw_pc_ar:inst1|pc[3]~30                                                                                  ; |ccq|sw_pc_ar:inst1|pc[3]~30                                                                            ; combout          ;
+; |ccq|sw_pc_ar:inst1|pc[3]~30                                                                                  ; |ccq|sw_pc_ar:inst1|pc[3]~31                                                                            ; cout             ;
+; |ccq|sw_pc_ar:inst1|pc[4]~32                                                                                  ; |ccq|sw_pc_ar:inst1|pc[4]~32                                                                            ; combout          ;
+; |ccq|sw_pc_ar:inst1|pc[4]~32                                                                                  ; |ccq|sw_pc_ar:inst1|pc[4]~33                                                                            ; cout             ;
+; |ccq|sw_pc_ar:inst1|pc[5]~34                                                                                  ; |ccq|sw_pc_ar:inst1|pc[5]~34                                                                            ; combout          ;
+; |ccq|sw_pc_ar:inst1|pc[5]~34                                                                                  ; |ccq|sw_pc_ar:inst1|pc[5]~35                                                                            ; cout             ;
+; |ccq|sw_pc_ar:inst1|pc[6]~36                                                                                  ; |ccq|sw_pc_ar:inst1|pc[6]~36                                                                            ; combout          ;
+; |ccq|sw_pc_ar:inst1|pc[6]~36                                                                                  ; |ccq|sw_pc_ar:inst1|pc[6]~37                                                                            ; cout             ;
+; |ccq|sw_pc_ar:inst1|pc[7]~38                                                                                  ; |ccq|sw_pc_ar:inst1|pc[7]~38                                                                            ; combout          ;
+; |ccq|sw_pc_ar:inst1|ar[2]                                                                                     ; |ccq|sw_pc_ar:inst1|ar[2]                                                                               ; regout           ;
+; |ccq|sw_pc_ar:inst1|ar[3]                                                                                     ; |ccq|sw_pc_ar:inst1|ar[3]                                                                               ; regout           ;
+; |ccq|sw_pc_ar:inst1|ar[4]                                                                                     ; |ccq|sw_pc_ar:inst1|ar[4]                                                                               ; regout           ;
+; |ccq|sw_pc_ar:inst1|ar[5]                                                                                     ; |ccq|sw_pc_ar:inst1|ar[5]                                                                               ; regout           ;
+; |ccq|sw_pc_ar:inst1|ar[6]                                                                                     ; |ccq|sw_pc_ar:inst1|ar[6]                                                                               ; regout           ;
+; |ccq|sw_pc_ar:inst1|ar[7]                                                                                     ; |ccq|sw_pc_ar:inst1|ar[7]                                                                               ; regout           ;
+; |ccq|memenab                                                                                                  ; |ccq|memenab~corein                                                                                     ; combout          ;
+; |ccq|inputd[5]                                                                                                ; |ccq|inputd[5]~corein                                                                                   ; combout          ;
+; |ccq|inputd[4]                                                                                                ; |ccq|inputd[4]~corein                                                                                   ; combout          ;
+; |ccq|pcclr                                                                                                    ; |ccq|pcclr~corein                                                                                       ; combout          ;
+; |ccq|pcclr~clkctrl                                                                                            ; |ccq|pcclr~clkctrl                                                                                      ; outclk           ;
++---------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Oct 19 14:39:32 2021
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off ccq -c ccq
+Info: Using vector source file "C:/Users/win732/Desktop/ccq/ccq.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      67.62 %
+Info: Number of transitions in simulation is 830
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 140 megabytes
+    Info: Processing ended: Tue Oct 19 14:39:34 2021
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

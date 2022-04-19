@@ -1,0 +1,40 @@
+|full_adder
+a => H_adder:U1.in_a
+b => H_adder:U1.in_b
+ci => H_adder:U2.in_b
+s <= H_adder:U2.out_s
+co <= Or_2:U3.z
+
+
+|full_adder|H_adder:U1
+in_a => out_co~0.IN1
+in_a => out_s~0.IN1
+in_a => out_s~1.IN1
+in_b => out_co~0.IN0
+in_b => out_s~1.IN0
+in_b => out_s~0.IN0
+out_s <= out_s~2.DB_MAX_OUTPUT_PORT_TYPE
+out_co <= out_co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder|H_adder:U2
+in_a => out_co~0.IN1
+in_a => out_s~0.IN1
+in_a => out_s~1.IN1
+in_b => out_co~0.IN0
+in_b => out_s~1.IN0
+in_b => out_s~0.IN0
+out_s <= out_s~2.DB_MAX_OUTPUT_PORT_TYPE
+out_co <= out_co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder|Or_2:U3
+x => z~1.IN0
+x => z~0.IN0
+x => z~3.IN0
+y => z~3.IN1
+y => z~0.IN1
+y => z~1.IN1
+z <= z~4.DB_MAX_OUTPUT_PORT_TYPE
+
+

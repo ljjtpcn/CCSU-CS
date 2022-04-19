@@ -1,0 +1,41 @@
+|vhdlb
+clr => qs[7].ACLR
+clr => qs[6].ACLR
+clr => qs[5].ACLR
+clr => qs[4].ACLR
+clr => qs[3].ACLR
+clr => qs[2].ACLR
+clr => qs[1].ACLR
+clr => qs[0].ACLR
+s0 => process_0~1.IN0
+s0 => process_0~0.IN0
+s0 => process_0~2.IN0
+s1 => process_0~2.IN1
+s1 => process_0~0.IN1
+s1 => process_0~1.IN1
+clk => qs[7].CLK
+clk => qs[6].CLK
+clk => qs[5].CLK
+clk => qs[4].CLK
+clk => qs[3].CLK
+clk => qs[2].CLK
+clk => qs[1].CLK
+clk => qs[0].CLK
+p[0] => qs~23.DATAB
+p[1] => qs~22.DATAB
+p[2] => qs~21.DATAB
+p[3] => qs~20.DATAB
+p[4] => qs~19.DATAB
+p[5] => qs~18.DATAB
+p[6] => qs~17.DATAB
+p[7] => qs~16.DATAB
+q[0] <= qs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= qs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= qs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= qs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= qs[7].DB_MAX_OUTPUT_PORT_TYPE
+
+

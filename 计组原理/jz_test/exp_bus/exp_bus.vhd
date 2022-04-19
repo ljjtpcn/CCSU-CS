@@ -1,0 +1,32 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity exp_bus is
+		port(clk: in std_logic;
+		sw_bus:in std_logic;
+		r1_bus:in std_logic;
+		r2_bus:in std_logic;
+		r3_bus:in std_logic;
+		k: in std_logic_vector(7 downto 0);
+		lddr:in std_logic_vector(3 downto 1);
+		l: inout std_logic_vector(7 downto 0)	);
+end exp_bus;
+architecture rtl of exp_bus is
+signal r1,r2,r3,bus_reg:std_logic_vector(7 downto 0):=(others=>'0');
+begin
+ldreg:process(clk,lddr,bus_reg)
+	begin
+	if clk'event and clk='1' then
+		if lddr(1)='1' then r1<=bus_reg;
+	    elsif lddr(2)='1' then r2<=bus_reg;
+	    elsif lddr(3)='1' then r3<=bus_reg;
+	    end if;
+	end if;
+	end process;	
+bus_reg<=k  when sw_bus='0' else
+		 r1 when r1_bus='0' else
+		 r2 when r2_bus='0' else
+		 r3 when r3_bus='0' else 
+		 (others=>'Z');
+l<=bus_reg when (sw_bus='0' or r1_bus='0' or r2_bus='0' or r3_bus='0') else
+   (others=>'Z');	
+end rtl;

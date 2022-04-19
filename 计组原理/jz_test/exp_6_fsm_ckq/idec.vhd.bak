@@ -1,0 +1,37 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_unsigned.ALL;
+entity idec IS
+PORT(  clk,reset,en_idec:IN STD_LOGIC;
+	   oprdata :out    STD_LOGIC_VECTOR(3 DOWNTO 0);
+	   opcode  :OUT   STD_LOGIC_VECTOR(3 DOWNTO 0);
+	   instruction      :INOUT STD_LOGIC_VECTOR(7 DOWNTO 0) );
+END idec;
+ARCHITECTURE rtl OF idec IS
+SIGNAL clkon:STD_LOGIC; 
+begin
+
+ 
+PROCESS(clk,reset) --
+BEGIN 
+	IF (reset ='0') THEN
+       clkon<='1';
+	ELSIF clk='1' AND clk'event THEN 
+		clkon<=not clkon; 
+	END IF; 
+end process; 
+
+Seq1:PROCESS(clkon)
+	begin
+	if reset='0' then
+	opcode <="0000";
+	oprdata <="0000";
+	elsIF clk'EVENT AND clk='0' and clkon='1'  THEN
+	   if  en_idec='1' then
+	    opcode <= instruction(7 downto 4);
+	    oprdata <= instruction(3 downto 0);
+	   end if ;
+	END IF;
+	END PROCESS;
+	
+END rtl;	   

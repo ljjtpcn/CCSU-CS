@@ -1,0 +1,25 @@
+--以下是半加器的描述
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+--以下是半加器的实体描述
+ENTITY H_adder IS
+PORT (in_a, in_b   : IN STD_LOGIC;
+      out_s, out_co: OUT STD_LOGIC);
+END H_adder ;
+
+--以下是半加器结构体的数据流描述
+--ARCHITECTURE Dataflow OF H_adder IS
+--BEGIN
+--	out_s<= in_a XOR in_b;
+--	out_co<= in_a AND in_b;
+--END Dataflow;
+
+--以下是半加器结构体行为描述
+ARCHITECTURE Dataflow OF H_adder IS
+BEGIN 
+	out_s<= '1' WHEN (in_a= '0' AND in_b= '1') ELSE
+	            '1' WHEN (in_a= '1' AND in_b= '0') ELSE
+				'0';
+	out_co<= '1' WHEN (in_a= '1' AND in_b= '1') ELSE
+	            '0';
+END Dataflow; 

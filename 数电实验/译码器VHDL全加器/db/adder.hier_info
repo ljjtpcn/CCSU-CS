@@ -1,0 +1,59 @@
+|adder
+IN_a => decoder3_8:U1.i[0]
+IN_b => decoder3_8:U1.i[1]
+IN_c => decoder3_8:U1.i[2]
+s <= ls20:U2.out_y
+ci <= ls20:U3.out_y
+
+
+|adder|decoder3_8:U1
+i[0] => Mux7.IN10
+i[0] => Mux6.IN10
+i[0] => Mux5.IN10
+i[0] => Mux4.IN10
+i[0] => Mux3.IN10
+i[0] => Mux2.IN10
+i[0] => Mux1.IN10
+i[0] => Mux0.IN10
+i[1] => Mux7.IN9
+i[1] => Mux6.IN9
+i[1] => Mux5.IN9
+i[1] => Mux4.IN9
+i[1] => Mux3.IN9
+i[1] => Mux2.IN9
+i[1] => Mux1.IN9
+i[1] => Mux0.IN9
+i[2] => Mux7.IN8
+i[2] => Mux6.IN8
+i[2] => Mux5.IN8
+i[2] => Mux4.IN8
+i[2] => Mux3.IN8
+i[2] => Mux2.IN8
+i[2] => Mux1.IN8
+i[2] => Mux0.IN8
+y[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder|ls20:U2
+a => out_y~0.IN0
+b => out_y~0.IN1
+c => out_y~1.IN1
+d => out_y~2.IN1
+out_y <= out_y~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder|ls20:U3
+a => out_y~0.IN0
+b => out_y~0.IN1
+c => out_y~1.IN1
+d => out_y~2.IN1
+out_y <= out_y~2.DB_MAX_OUTPUT_PORT_TYPE
+
+

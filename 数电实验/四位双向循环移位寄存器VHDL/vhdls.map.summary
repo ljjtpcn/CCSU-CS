@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Nov 03 21:25:01 2021
+Quartus II Version : 9.0 Build 184 04/29/2009 SP 1 SJ Web Edition
+Revision Name : vhdls
+Top-level Entity Name : vhdls
+Family : Cyclone II
+Total logic elements : 5
+    Total combinational functions : 5
+    Dedicated logic registers : 4
+Total registers : 4
+Total pins : 12
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

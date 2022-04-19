@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Oct 21 21:45:37 2021
+Quartus II Version : 9.0 Build 184 04/29/2009 SP 1 SJ Web Edition
+Revision Name : exp_bus
+Top-level Entity Name : exp_bus
+Family : Cyclone II
+Total logic elements : 45
+    Total combinational functions : 29
+    Dedicated logic registers : 24
+Total registers : 24
+Total pins : 24
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

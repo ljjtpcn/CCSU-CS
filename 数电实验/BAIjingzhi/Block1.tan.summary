@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 33.594 ns
+From           : 74192:inst1|25
+To             : Q5
+From Clock     : CPD
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CPU'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 42.94 MHz ( period = 23.290 ns )
+From           : 74192:inst1|25
+To             : 74192:inst1|25
+From Clock     : CPU
+To Clock       : CPU
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CPD'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 44.80 MHz ( period = 22.321 ns )
+From           : 74192:inst1|25
+To             : 74192:inst1|25
+From Clock     : CPD
+To Clock       : CPD
+Failed Paths   : 0
+
+Type           : Clock Hold: 'CPU'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : 74192:inst1|25
+To             : 74192:inst1|25
+From Clock     : CPU
+To Clock       : CPU
+Failed Paths   : 7
+
+Type           : Clock Hold: 'CPD'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : 74192:inst1|25
+To             : 74192:inst1|25
+From Clock     : CPD
+To Clock       : CPD
+Failed Paths   : 7
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 14
+
+--------------------------------------------------------------------------------------
+

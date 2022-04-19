@@ -1,0 +1,62 @@
+Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+11
+910
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+74112
+# storage
+db|jk.(1).cnf
+db|jk.(1).cnf
+# case_insensitive
+# source_file
+c:|altera|90sp1|quartus|libraries|others|maxplus2|74112.bdf
+1c24dbebb1aabb30449246cb3de88d7
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+74112:inst
+}
+# macro_sequence
+
+# end
+# entity
+jk
+# storage
+db|jk.(0).cnf
+db|jk.(0).cnf
+# case_insensitive
+# source_file
+jk.bdf
+603994f9ea4be66f75de3834ef8bf1d
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

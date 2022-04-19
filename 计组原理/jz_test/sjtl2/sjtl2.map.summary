@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Oct 27 23:12:42 2021
+Quartus II Version : 9.0 Build 184 04/29/2009 SP 1 SJ Web Edition
+Revision Name : sjtl2
+Top-level Entity Name : sjtl2
+Family : Cyclone II
+Total logic elements : 532
+    Total combinational functions : 508
+    Dedicated logic registers : 48
+Total registers : 48
+Total pins : 38
+Total virtual pins : 0
+Total memory bits : 2,048
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

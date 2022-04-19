@@ -1,0 +1,104 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_unsigned.ALL;
+
+entity exp_r_alu is
+port(	clk,reset                    :IN STD_LOGIC;
+		sw_bus,r4_bus,r5_bus,alu_bus,memen :IN STD_LOGIC;
+		lddr1,lddr2,ldr4,ldr5        :IN STD_LOGIC;
+		m,cn                         :IN STD_LOGIC;
+		s                            :IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		k                            :IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		d                            :INOUT STD_LOGIC_VECTOR(7 DOWNTO 0) );
+end exp_r_alu;
+
+ARCHITECTURE rtl OF exp_r_alu IS
+SIGNAL dr1,dr2,r4,r5,aluout,bus_reg:STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL sel:STD_LOGIC_VECTOR(5 DOWNTO 0);
+SIGNAL clkon:STD_LOGIC; 
+begin
+
+PROCESS(clk) --2?¡ì2?¡ì|?¡ì21KhzD?o? tick
+BEGIN 
+	IF (reset ='0') THEN
+       clkon<='1';
+	ELSIF clk='1' AND clk'event THEN 
+		clkon<=not clkon; 
+	END IF; 
+end process; 
+
+ldreg:PROCESS(clk,lddr1,lddr2,ldr4,ldr5,bus_reg,clkon)
+	begin
+	IF clk'EVENT AND clk='0' and clkon='1' THEN
+		IF lddr1='1' THEN dr1<=bus_reg;
+	    ELSIF lddr2='1' THEN dr2<=bus_reg;
+	    ELSIF ldr4='1' THEN r4<=bus_reg;
+	    ELSIF ldr5='1' THEN r5<=bus_reg;
+	    END IF;
+	END IF;
+	END PROCESS;
+alu:PROCESS(m,cn,s,dr1,dr2,sel,aluout)
+   BEGIN
+   sel<=m & cn & s;
+   CASE sel IS
+	when "000000" => aluout<=dr1+1;
+	when "010000" => aluout<=dr1;
+	when "100000" => aluout<=not dr1;
+	when "000001" => aluout<=(dr1 or dr2)+1;
+	when "010001" => aluout<=dr1 or dr2;
+	when "100001" => aluout<=not(dr1 or dr2);
+	when "000010" => aluout<=(dr1 or (not dr2))+1;
+	when "010010" => aluout<=dr1 or (not dr2);
+	when "100010" => aluout<=(not dr1)and dr2;
+	when "000011" => aluout<=x"00";
+	when "010011" => aluout<=aluout-1;
+	when "100011" => aluout<=x"00";
+	when "000100" => aluout<=dr1+(dr1 and (not dr2))+1;
+	when "010100" => aluout<=dr1+(dr1 and (not dr2));
+	when "100100" => aluout<=not (dr1 and dr2);
+	when "000101" => aluout<=((dr1 or dr2 or dr1) and dr2) or x"01";
+	when "010101" => aluout<=(dr1 or dr2)+(dr1 and(not dr2));
+	when "100101" => aluout<=not dr2;
+	when "000110" => aluout<=dr1-dr2;
+	when "010110" => aluout<=dr1-dr2-1;
+	when "100110" => aluout<=dr1 xor dr2;
+	when "000111" => aluout<=dr1 and(not dr2);
+	when "010111" => aluout<=(dr1 and (not dr2))-1;
+	when "100111" => aluout<=dr1 and(not dr2);
+	when "001000" => aluout<=dr1+(dr1 and dr2)+1;
+	when "011000" => aluout<=dr1+(dr1 and dr2);
+	when "101000" => aluout<=(not dr1)or dr2;
+	when "001001" => aluout<=dr1+dr2+1;
+	when "011001" => aluout<=dr1+dr2;
+	when "101001" => aluout<=dr1 xnor dr2;
+	when "001010" => aluout<=(dr1 or(not dr2))+(dr1 and dr2)+1;
+	when "011010" => aluout<=(dr1 or(not dr2))+(dr1 and dr2);
+	when "101010" => aluout<=dr2;
+	when "001011" => aluout<=dr1 and dr2;
+	when "011011" => aluout<=(dr1 and dr2)-1;
+	when "101011" => aluout<=dr1 and dr2;
+	when "001100" => aluout<=dr1+dr1+1;
+	when "011100" => aluout<=dr1 or dr1;
+	when "101100" => aluout<=x"01";
+	when "001101" => aluout<=(dr1 or dr2)+dr1+1;
+	when "011101" => aluout<=(dr1 or dr2)+dr1;
+	when "101101" => aluout<=dr1 or(not dr2);
+	when "001110" => aluout<=(dr1 or (not dr2))+dr1+1;
+	when "011110" => aluout<=(dr1 or (not dr2))+dr1;
+	when "101110" => aluout<=dr1 or dr2;
+	when "001111" => aluout<=dr1;
+	when "011111" => aluout<=dr1-1;
+	when "101111" => aluout<=dr1;
+	when others   => aluout<=x"ff";
+end case;
+END PROCESS;
+   
+bus_reg<=k      WHEN sw_bus='0'  ELSE
+		 r4     WHEN r4_bus='0'  ELSE
+		 r5     WHEN r5_bus='0'  ELSE
+		 aluout WHEN alu_bus='0' ELSE 
+		 d;
+		 
+d<=bus_reg WHEN (sw_bus='0' OR r4_bus='0' OR r5_bus='0' OR alu_bus='0') ELSE
+   (OTHERS=>'Z');	
+END rtl;

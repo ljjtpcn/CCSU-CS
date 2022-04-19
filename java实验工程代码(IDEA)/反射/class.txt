@@ -1,0 +1,2 @@
+className=day2.Teacher
+methodName=show
