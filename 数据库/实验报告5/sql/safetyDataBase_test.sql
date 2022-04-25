@@ -1,8 +1,16 @@
-UPDATE safetyDataBase.test SET info = 'loop index1' WHERE id = 1;
-UPDATE safetyDataBase.test SET info = 'loop index2' WHERE id = 2;
-UPDATE safetyDataBase.test SET info = 'loop index3' WHERE id = 3;
-UPDATE safetyDataBase.test SET info = 'loop index4' WHERE id = 4;
-UPDATE safetyDataBase.test SET info = 'loop index5' WHERE id = 5;
-UPDATE safetyDataBase.test SET info = 'loop index6' WHERE id = 6;
-UPDATE safetyDataBase.test SET info = 'loop index7' WHERE id = 7;
-UPDATE safetyDataBase.test SET info = 'loop index8' WHERE id = 8;
+CREATE TABLE test
+(
+    id   int AUTO_INCREMENT
+        PRIMARY KEY,
+    info varchar(20) NULL
+)
+    AUTO_INCREMENT = 9;
+
+INSERT INTO safetyDataBase.test (id, info) VALUES (1, 'loop index1');
+INSERT INTO safetyDataBase.test (id, info) VALUES (2, 'loop index2');
+INSERT INTO safetyDataBase.test (id, info) VALUES (3, 'loop index3');
+INSERT INTO safetyDataBase.test (id, info) VALUES (4, 'loop index4');
+INSERT INTO safetyDataBase.test (id, info) VALUES (5, 'loop index5');
+INSERT INTO safetyDataBase.test (id, info) VALUES (6, 'loop index6');
+INSERT INTO safetyDataBase.test (id, info) VALUES (7, 'loop index7');
+INSERT INTO safetyDataBase.test (id, info) VALUES (8, 'loop index8');

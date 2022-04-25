@@ -1,12 +1,21 @@
-UPDATE safetyDataBase.score SET daily = 87, final = 92 WHERE studentno = '18122221324' AND courseno = 'c05103';
-UPDATE safetyDataBase.score SET daily = 85, final = 90 WHERE studentno = '18122221324' AND courseno = 'c05109';
-UPDATE safetyDataBase.score SET daily = 95, final = 93 WHERE studentno = '18122221324' AND courseno = 'c05127';
-UPDATE safetyDataBase.score SET daily = 78, final = 78 WHERE studentno = '18125111109' AND courseno = 'c05108';
-UPDATE safetyDataBase.score SET daily = 91, final = 88 WHERE studentno = '18125111109' AND courseno = 'c05127';
-UPDATE safetyDataBase.score SET daily = 80, final = 80 WHERE studentno = '18125111109' AND courseno = 'c05138';
-UPDATE safetyDataBase.score SET daily = 88, final = 72 WHERE studentno = '18125121107' AND courseno = 'c05103';
-UPDATE safetyDataBase.score SET daily = 81, final = 76 WHERE studentno = '18125121107' AND courseno = 'c05127';
-UPDATE safetyDataBase.score SET daily = 75, final = 74 WHERE studentno = '18125121107' AND courseno = 'c05138';
-UPDATE safetyDataBase.score SET daily = 89, final = 88 WHERE studentno = '18137156732' AND courseno = 'c05103';
-UPDATE safetyDataBase.score SET daily = 75, final = 68 WHERE studentno = '18137156732' AND courseno = 'c05108';
-UPDATE safetyDataBase.score SET daily = 81, final = 79 WHERE studentno = '18137156732' AND courseno = 'c05127';
+CREATE TABLE score
+(
+    studentno char(12)                NOT NULL COMMENT '学号',
+    courseno  char(6)                 NOT NULL COMMENT '课程号',
+    daily     float(3, 1) DEFAULT 0.0 NULL COMMENT '平时成绩',
+    final     float(3, 1) DEFAULT 0.0 NULL COMMENT '期末成绩',
+    PRIMARY KEY (studentno, courseno)
+);
+
+INSERT INTO safetyDataBase.score (studentno, courseno, daily, final) VALUES ('18122221324', 'c05103', 87, 92);
+INSERT INTO safetyDataBase.score (studentno, courseno, daily, final) VALUES ('18122221324', 'c05109', 85, 90);
+INSERT INTO safetyDataBase.score (studentno, courseno, daily, final) VALUES ('18122221324', 'c05127', 95, 93);
+INSERT INTO safetyDataBase.score (studentno, courseno, daily, final) VALUES ('18125111109', 'c05108', 78, 78);
+INSERT INTO safetyDataBase.score (studentno, courseno, daily, final) VALUES ('18125111109', 'c05127', 91, 88);
+INSERT INTO safetyDataBase.score (studentno, courseno, daily, final) VALUES ('18125111109', 'c05138', 80, 80);
+INSERT INTO safetyDataBase.score (studentno, courseno, daily, final) VALUES ('18125121107', 'c05103', 88, 72);
+INSERT INTO safetyDataBase.score (studentno, courseno, daily, final) VALUES ('18125121107', 'c05127', 81, 76);
+INSERT INTO safetyDataBase.score (studentno, courseno, daily, final) VALUES ('18125121107', 'c05138', 75, 74);
+INSERT INTO safetyDataBase.score (studentno, courseno, daily, final) VALUES ('18137156732', 'c05103', 89, 88);
+INSERT INTO safetyDataBase.score (studentno, courseno, daily, final) VALUES ('18137156732', 'c05108', 75, 68);
+INSERT INTO safetyDataBase.score (studentno, courseno, daily, final) VALUES ('18137156732', 'c05127', 81, 79);

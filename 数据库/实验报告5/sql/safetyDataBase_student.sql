@@ -1,4 +1,15 @@
-UPDATE safetyDataBase.student SET studentNo = '18122221324', sname = '何白露', sex = '女', birthdate = '2000-12-04', entrance = 879, phone = '13786112345', email = 'heyy@sina.com';
-UPDATE safetyDataBase.student SET studentNo = '18125111109', sname = '敬横江', sex = '男', birthdate = '2000-03-01', entrance = 789, phone = '15678945623', email = 'jing@sina.com';
-UPDATE safetyDataBase.student SET studentNo = '18125121107', sname = '王伟', sex = '男', birthdate = '1999-09-12', entrance = 790, phone = '13786188347', email = '3267888@QQ.com';
-UPDATE safetyDataBase.student SET studentNo = '18137156732', sname = '吴英', sex = '女', birthdate = '2000-10-19', entrance = 888, phone = '13055568618', email = '17865@QQ.com';
+CREATE TABLE student
+(
+    studentNo char(12)    NULL COMMENT '学号',
+    sname     char(8)     NULL COMMENT '姓名',
+    sex       char(2)     NULL COMMENT '性别',
+    birthdate date        NULL COMMENT '出生日期',
+    entrance  int         NULL COMMENT '入学成绩',
+    phone     char(11)    NULL COMMENT '电话号码',
+    email     varchar(20) NULL COMMENT '邮件号码'
+);
+
+INSERT INTO safetyDataBase.student (studentNo, sname, sex, birthdate, entrance, phone, email) VALUES ('18122221324', '何白露', '女', '2000-12-04', 879, '13786112345', 'heyy@sina.com');
+INSERT INTO safetyDataBase.student (studentNo, sname, sex, birthdate, entrance, phone, email) VALUES ('18125111109', '敬横江', '男', '2000-03-01', 789, '15678945623', 'jing@sina.com');
+INSERT INTO safetyDataBase.student (studentNo, sname, sex, birthdate, entrance, phone, email) VALUES ('18125121107', '王伟', '男', '1999-09-12', 790, '13786188347', '3267888@QQ.com');
+INSERT INTO safetyDataBase.student (studentNo, sname, sex, birthdate, entrance, phone, email) VALUES ('18137156732', '吴英', '女', '2000-10-19', 888, '13055568618', '17865@QQ.com');
