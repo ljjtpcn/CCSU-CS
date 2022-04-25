@@ -1,0 +1,12 @@
+UPDATE safetyDataBase.score SET daily = 87, final = 92 WHERE studentno = '18122221324' AND courseno = 'c05103';
+UPDATE safetyDataBase.score SET daily = 85, final = 90 WHERE studentno = '18122221324' AND courseno = 'c05109';
+UPDATE safetyDataBase.score SET daily = 95, final = 93 WHERE studentno = '18122221324' AND courseno = 'c05127';
+UPDATE safetyDataBase.score SET daily = 78, final = 78 WHERE studentno = '18125111109' AND courseno = 'c05108';
+UPDATE safetyDataBase.score SET daily = 91, final = 88 WHERE studentno = '18125111109' AND courseno = 'c05127';
+UPDATE safetyDataBase.score SET daily = 80, final = 80 WHERE studentno = '18125111109' AND courseno = 'c05138';
+UPDATE safetyDataBase.score SET daily = 88, final = 72 WHERE studentno = '18125121107' AND courseno = 'c05103';
+UPDATE safetyDataBase.score SET daily = 81, final = 76 WHERE studentno = '18125121107' AND courseno = 'c05127';
+UPDATE safetyDataBase.score SET daily = 75, final = 74 WHERE studentno = '18125121107' AND courseno = 'c05138';
+UPDATE safetyDataBase.score SET daily = 89, final = 88 WHERE studentno = '18137156732' AND courseno = 'c05103';
+UPDATE safetyDataBase.score SET daily = 75, final = 68 WHERE studentno = '18137156732' AND courseno = 'c05108';
+UPDATE safetyDataBase.score SET daily = 81, final = 79 WHERE studentno = '18137156732' AND courseno = 'c05127';
