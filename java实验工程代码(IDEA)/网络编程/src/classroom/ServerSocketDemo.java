@@ -10,7 +10,7 @@ public class ServerSocketDemo {
         Socket accept = ss.accept();
 
         BufferedReader br = new BufferedReader(new InputStreamReader(accept.getInputStream()));
-        BufferedWriter bw = new BufferedWriter(new FileWriter("/home/ljjtpcn/Desktop/work/JAVA/java实验/网络编程/src/classroom/config.imi"));
+        BufferedWriter bw = new BufferedWriter(new FileWriter("/home/ljjtpcn/Desktop/work/CS学科/java实验工程代码(IDEA)/网络编程/src/classroom/config.imi"));
 
         String line;
         while ((line = br.readLine()) != null) {

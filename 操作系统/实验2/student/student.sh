@@ -1,5 +1,5 @@
 #!/bin/zsh
-# mountusb.sh
+# student.sh
 
 #exit method
 quit()
