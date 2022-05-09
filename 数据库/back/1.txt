@@ -1,0 +1,49 @@
+CREATE TABLE user
+(
+    name     varchar(128) COMMENT '姓名',
+    idNumber varchar(128) COMMENT '身份证号码',
+    password varchar(128) COMMENT '客户密码',
+
+    PRIMARY KEY (idNumber)
+);
+
+CREATE TABLE card -- 卡表
+(
+    cardNumber varchar(128) COMMENT '银行卡号',
+    ofIdNumber varchar(128) COMMENT '所属账户身份证号码',
+    password   varchar(128) COMMENT '卡密码',
+    startTime  datetime COMMENT '开户时间',
+    money      bigint COMMENT '金额',
+    type       varchar(128) DEFAULT '活期' COMMENT '卡类型', -- 活期， 定期
+    status     boolean      DEFAULT TRUE COMMENT '卡状态', -- 1为正常，0为挂失
+    PRIMARY KEY (cardNumber)
+);
+
+CREATE TABLE deposit -- 存款
+(
+    cardNumber varchar(128) COMMENT '存款卡号',
+    time       datetime COMMENT '存款时间',
+    money      bigint COMMENT '存款金额',
+    PRIMARY KEY (cardNumber, time)
+#     FOREIGN KEY (cardNumber) REFERENCES card (cardNumber)
+);
+
+CREATE TABLE withdrawal -- 取款
+(
+    cardNumber varchar(128) COMMENT '取款卡号',
+    time       datetime COMMENT '取款时间',
+    money      bigint COMMENT '取款金额',
+    PRIMARY KEY (cardNumber, time)
+#     FOREIGN KEY (cardNumber) REFERENCES card (cardNumber)
+);
+
+CREATE TABLE transfer -- 转账
+(
+    sendCardNumber    varchar(128) COMMENT '发送方卡号',
+    receiveCardNumber varchar(128) COMMENT '接收方卡号',
+    time              datetime COMMENT '转账时间',
+    money             bigint COMMENT '转账金额',
+    PRIMARY KEY (sendCardNumber, receiveCardNumber, time)
+#     FOREIGN KEY (sendCardNumber) REFERENCES card (cardNumber)
+);
+
