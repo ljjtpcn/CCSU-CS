@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/lambda/JS.iml" filepath="$PROJECT_DIR$/lambda/JS.iml" />
-      <module fileurl="file://$PROJECT_DIR$/LEetCode/LEetCode.iml" filepath="$PROJECT_DIR$/LEetCode/LEetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/LeetCode/LeetCode.iml" filepath="$PROJECT_DIR$/LeetCode/LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyStream/MyStream.iml" filepath="$PROJECT_DIR$/MyStream/MyStream.iml" />
       <module fileurl="file://$PROJECT_DIR$/Thread/Thread.iml" filepath="$PROJECT_DIR$/Thread/Thread.iml" />

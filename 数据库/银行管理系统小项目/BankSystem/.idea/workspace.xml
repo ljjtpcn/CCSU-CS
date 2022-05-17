@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="58ae3133-8451-488f-8989-3980da0a208b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/mappers/CardMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/mappers/DepositMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/mappers/LogMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/mappers/TransferMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/mappers/WithdrawalMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/pojo/Card.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/pojo/Deposit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/pojo/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/pojo/Transfer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/pojo/Withdrawal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/view/handler/LoginHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/view/handler/RegisterHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/view/handler/special/AlphabetNumberHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/view/handler/special/DateHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/view/handler/special/MoneyHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/view/handler/special/NumberHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/view/util/BulkImportUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/view/util/CheckUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/view/util/CodePictureUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/view/util/DimensionUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/view/util/SetBackgroundUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/view/util/SetIconUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/view/window/LoginView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/view/window/RegisterView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/view/window/table/MainViewCellRender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/view/window/table/MainViewTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/twopair/view/window/table/MainViewTableModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cn/twopair/mappers/CardMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cn/twopair/mappers/DepositMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cn/twopair/mappers/LogMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cn/twopair/mappers/WithdrawalMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cn/twopair/mappers/transferMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/StatisticsViewbk.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/backStatistics.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/bk.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/brokenLine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/cancel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/cancel_max.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/changeback.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/date.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/date32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/deleteBack.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/deleteLogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/deleteView.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/expend.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/female.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/gif.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/id32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/income.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/lastMonth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/lastWeek.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/lastYear.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/male.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/modify.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/money.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/money32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/name.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/ok.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/password.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/paysure.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/pig.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/pre.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/radar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/register.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/remark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/remark32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/sex.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/statistic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/statistics.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/sure.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/sure32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/sure_Statistics.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/sure_min.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/thisMonth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/thisWeek.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/thisYear.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/type.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/type32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/username.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/username32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验2(shell语句)/B20190103224-李佳骏-shell程序设计2.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验2(shell语句)/Usb/mountusb.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验2(shell语句)/backup/backup.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验2(shell语句)/backup/test/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验2(shell语句)/hello" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验2(shell语句)/student/student.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验3(进程创建)/test/afterClass.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验3(进程创建)/test/e202.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验4(软中断)/e203.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验4(软中断)/e800.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验4(软中断)/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验5(管道通信)/e204.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验5(管道通信)/e204.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验5(管道通信)/msg.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验5(管道通信)/msg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验6(动态优先级调度)/algorithm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验6(动态优先级调度)/schedulingAlgorithm.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验7（PV）/B20190103224-李佳骏-实验四-P,V原语应用程序.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验7（PV）/muti_consumer.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验7（PV）/muti_producer.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验报告/实验1用户接口实验报告.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../操作系统/实验报告/实验1用户接口实验报告.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../操作系统/实验报告/实验2进程管理实验报告.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../操作系统/实验报告/实验2进程管理实验报告.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../计组原理/3/计算机组成原理实验报告三 B20190103224李佳骏.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../计组原理/3/计算机组成原理实验报告三 B20190103224李佳骏.docx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Tag Library Descriptor" />
+        <option value="mybatis-mapper" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/resources/db.properties" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/log4j.properties" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="$USER_HOME$/myrepo" />
+        <option name="mavenHome" value="$USER_HOME$/tools/apache-maven-3.8.5" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="$USER_HOME$/tools/apache-maven-3.8.5/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="28h2G7MVIAhuhSzne5QCNnT5PHS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "/home/ljjtpcn/Desktop/work/CS学科/java实验工程代码(IDEA)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "fileTemplates"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/cn/twopair/view/window/table" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/cn/twopair/view/util" />
+      <recent name="$PROJECT_DIR$/src/main/java/cn/twopair/view/handler" />
+      <recent name="$PROJECT_DIR$/src/main/java/cn/twopair/mappers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/cn/twopair/mappers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.APP">
+    <configuration name="APP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.twopair.APP" />
+      <module name="BankSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.twopair.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cn.twopair.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.twopair.Main" />
+      <module name="BankSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.twopair.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="APP.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BankSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.twopair.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.twopair" />
+      <option name="MAIN_CLASS_NAME" value="cn.twopair.APP" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.APP" />
+        <item itemvalue="JUnit.APP.test" />
+        <item itemvalue="Application.cn.twopair.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="58ae3133-8451-488f-8989-3980da0a208b" name="Changes" comment="" />
+      <created>1651654398720</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651654398720</updated>
+      <workItem from="1651654400342" duration="2468000" />
+      <workItem from="1651656877432" duration="1882000" />
+      <workItem from="1651662622934" duration="5325000" />
+      <workItem from="1651667958166" duration="737000" />
+      <workItem from="1651668703666" duration="940000" />
+      <workItem from="1651711166374" duration="8493000" />
+      <workItem from="1651931497893" duration="157000" />
+      <workItem from="1652079116930" duration="62000" />
+      <workItem from="1652148004385" duration="7229000" />
+      <workItem from="1652172532209" duration="1587000" />
+      <workItem from="1652175014379" duration="6693000" />
+      <workItem from="1652182651817" duration="119000" />
+      <workItem from="1652265839798" duration="735000" />
+      <workItem from="1652666626741" duration="91000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

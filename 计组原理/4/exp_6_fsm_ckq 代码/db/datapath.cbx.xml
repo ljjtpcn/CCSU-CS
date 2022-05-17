@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="datapath">
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|lpm_ram_io0:U2|lpm_ram_io:lpm_ram_io_component|altram:sram|altsyncram:ram_block" CBX_FILE_NAME="altsyncram_v9a1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

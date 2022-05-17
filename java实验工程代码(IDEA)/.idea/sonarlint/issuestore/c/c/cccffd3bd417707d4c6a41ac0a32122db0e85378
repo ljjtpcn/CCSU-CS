@@ -1,0 +1,8 @@
+
+f	java:S117a"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡¼ÈÏ
+z
+java:S1149W"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ÿµÉ]
+€
+java:S1149X"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ðºÂ²üÿÿÿÿ
+{
+java:S1149d"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(Ü–ÑÌ

@@ -1,0 +1,61 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_unsigned.ALL;
+entity sw_pc_ar IS
+PORT(  clk,pcclr,pcld,pcen,reset:IN STD_LOGIC;
+	   sw_bus,pc_bus,ldar,memen     :IN STD_LOGIC;
+	   inputd :IN    STD_LOGIC_VECTOR(7 DOWNTO 0);
+	   arout  :OUT   STD_LOGIC_VECTOR(7 DOWNTO 0);
+	   d      :INOUT STD_LOGIC_VECTOR(7 DOWNTO 0) );
+END sw_pc_ar;
+ARCHITECTURE rtl OF sw_pc_ar IS
+SIGNAL pc,ar,bus_reg:STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL clkon:STD_LOGIC; 
+begin
+
+--
+--  clk  --  --
+--         --  --
+-- clkon     ----
+--       ----
+PROCESS(clk) --
+BEGIN 
+	IF (reset ='0') THEN
+       clkon<='1';
+	ELSIF clk='1' AND clk'event THEN 
+		clkon<=not clkon; 
+	END IF; 
+end process; 
+
+--Seq1:PROCESS(clk,ldar,bus_reg)
+Seq1:PROCESS(clk,clkon)
+	begin
+	IF clk'EVENT AND clk='0' and clkon='1'  THEN
+		IF ldar='1' THEN ar<=bus_reg;
+	    END IF;
+	END IF;
+	END PROCESS;
+	
+--Seq2:PROCESS(clkon,clk,pcclr,pcld,pcen,bus_reg)
+Seq2:PROCESS(reset,clk)
+	begin
+	IF pcclr='0' or reset='0' THEN pc<=(OTHERS=>'0');
+	ELSIF clk'EVENT AND clk='0' and clkon='1' THEN
+	  --IF clk'EVENT AND clk='1' THEN
+		IF (pcld='0' AND pcen='1') THEN pc<=bus_reg;
+	    ELSIF (pcld='1' AND pcen='1') THEN pc<=pc+1;
+	    END IF;
+	  --end if;
+	END IF;
+	END PROCESS;	
+	
+bus_reg<=inputd WHEN sw_bus='0'  ELSE
+		 pc     WHEN pc_bus='0'  ELSE
+		 d     WHEN memen='1'  ELSE
+		 (OTHERS=>'Z');
+		 
+d<=bus_reg WHEN (sw_bus='0' OR pc_bus='0') ELSE
+   (OTHERS=>'Z');
+   
+   arout<=ar;	   
+END rtl;	   

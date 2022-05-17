@@ -1,0 +1,10 @@
+
+State Machine - |datapath|fsmctrl:U0|State
+Name State.G State.F State.E State.D State.C State.B State.A 
+State.A 0 0 0 0 0 0 0 
+State.B 0 0 0 0 0 1 1 
+State.C 0 0 0 0 1 0 1 
+State.D 0 0 0 1 0 0 1 
+State.E 0 0 1 0 0 0 1 
+State.F 0 1 0 0 0 0 1 
+State.G 1 0 0 0 0 0 1 
