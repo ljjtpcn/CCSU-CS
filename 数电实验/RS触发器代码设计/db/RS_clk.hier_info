@@ -1,9 +1,0 @@
-|RS_clk
-s => process_0~1.IN0
-s => process_0~0.IN0
-r => process_0~0.IN1
-r => process_0~1.IN1
-q <= q1.DB_MAX_OUTPUT_PORT_TYPE
-not_q <= nq1.DB_MAX_OUTPUT_PORT_TYPE
-
-

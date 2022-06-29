@@ -1,9 +1,0 @@
-|Block1
-S <= inst.DB_MAX_OUTPUT_PORT_TYPE
-A => inst.IN0
-A => inst7.IN0
-B => inst.IN1
-B => inst7.IN1
-C <= inst8.DB_MAX_OUTPUT_PORT_TYPE
-
-

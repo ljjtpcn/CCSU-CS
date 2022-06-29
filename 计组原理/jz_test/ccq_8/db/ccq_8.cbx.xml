@@ -1,6 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="ccq_8">
-		<CBX_INST_ENTRY INSTANCE_NAME="|ccq_8|ram_io:inst|LPM_RAM_IO:inst|altram:sram|altsyncram:ram_block" CBX_FILE_NAME="altsyncram_sca1.tdf"/>
-	</PROJECT>
-</LOG_ROOT>
