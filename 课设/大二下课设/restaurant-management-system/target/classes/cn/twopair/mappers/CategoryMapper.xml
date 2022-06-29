@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--名称空间-->
+<mapper namespace="cn.twopair.mappers.CategoryMapper">
+
+    <!--动态查询菜品分类信息-->
+    <select id="getCategoryData" resultType="Category">
+        select * from category
+        <where>
+            <if test="id != null and id != ''">
+                and id = #{id}
+            </if>
+            <if test="name != null and name != ''">
+                and name LIKE CONCAT('%', #{name}, '%')
+            </if>
+        </where>
+    </select>
+    <!--通过名称查id-->
+    <select id="selectIdByName" resultType="java.lang.Integer">
+        SELECT id
+        FROM category
+        WHERE name = #{name}
+    </select>
+
+    <!--新增一个菜品分类信息-->
+    <insert id="addOneCategory">
+        INSERT INTO category(name, `describe`)
+        VALUES (#{name}, #{describe});
+    </insert>
+
+    <!--修改信息-->
+    <update id="mergeOneCategory">
+        UPDATE category
+        SET name       = #{name},
+            `describe` = #{describe}
+        WHERE id = #{id};
+    </update>
+
+    <!--删除信息（支持多行删除）-->
+    <delete id="deleteCategoryById">
+        DELETE
+        FROM category
+        WHERE id IN (${ids})
+    </delete>
+
+</mapper>

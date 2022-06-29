@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--引入database.properties文件中的信息-->
+    <properties resource="db.properties"/>
+
+    <settings>
+        <!--选择logback日志存储文件-->
+        <setting name="logPrefix" value="cn.twopair.mappers."/>
+    </settings>
+
+    <typeAliases>
+        <package name="cn.twopair.pojo"/>
+    </typeAliases>
+
+    <!--    配置多个数据库环境信息， 通过default切换环境-->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.userName}"/>
+                <property name="password" value="${jdbc.passWorld}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+
+    <mappers>
+        <!--加载sql映射文件-->
+        <!--<mappers resource="cn/twopair/mappers/UserMapper.xml"/>-->
+<!--        <mapper resource="cn/twopair/service/ServicesMapper.xml"/>-->
+        <!--或使用包扫描(推荐)-->
+        <!--Mapper代理方式(包扫描）-->
+        <package name="cn.twopair.mappers"/>
+
+    </mappers>
+</configuration>

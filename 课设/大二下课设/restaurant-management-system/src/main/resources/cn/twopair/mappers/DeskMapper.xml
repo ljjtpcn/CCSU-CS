@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--名称空间-->
+<mapper namespace="cn.twopair.mappers.DeskMapper">
+
+    <!--新增一个餐台-->
+    <insert id="addOneDesk">
+        INSERT INTO desk(no, seating, status)
+        VALUES (#{no}, #{seating}, #{status});
+    </insert>
+
+    <!--修改某餐台信息-->
+    <update id="mergeOneDesk">
+        UPDATE desk
+        SET no      = #{no},
+            seating = #{seating},
+            status  = #{status}
+        WHERE id = #{id};
+    </update>
+
+    <!--删除餐台信息（支持多行删除）-->
+    <delete id="deleteDeskById">
+        DELETE
+        FROM desk
+        WHERE id IN (${ids});
+    </delete>
+
+    <!--动态查询餐台信息-->
+    <select id="getDeskData" resultType="Desk">
+        SELECT *
+        FROM desk
+        <where>
+            <if test="no != null and no != ''">
+                AND no = #{no}
+            </if>
+            <if test="seating != null and seating != ''">
+                AND seating >= #{seating}
+            </if>
+            <if test="status != null and status != ''">
+                AND status = #{status}
+            </if>
+        </where>
+    </select>
+
+    <!--通过餐台编号查询id-->
+    <select id="selectIdByNo" resultType="java.lang.Integer">
+        SELECT id
+        FROM desk
+        WHERE no = #{no};
+    </select>
+</mapper>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--名称空间-->
+<mapper namespace="cn.twopair.mappers.EmployeeMapper">
+
+    <!--通过身份证号查询id-->
+    <select id="selectIdByIdentityID" resultType="java.lang.Integer">
+        SELECT id
+        FROM employee
+        WHERE identityID = #{identityID};
+    </select>
+
+    <!--新增一个员工-->
+    <insert id="addOneEmployee">
+        INSERT INTO employee(name, sex, identityID, tel, status)
+        VALUES (#{name}, #{sex}, #{identityID}, #{tel}, #{status});
+    </insert>
+
+    <!--修改某员工信息-->
+    <update id="mergeOneEmployee">
+        UPDATE employee
+        SET name       = #{name},
+            sex        = #{sex},
+            identityID = #{identityID},
+            tel        = #{tel},
+            status     = #{status}
+        WHERE id = #{id};
+    </update>
+
+    <!--删除员工信息（支持多行删除）-->
+    <delete id="deleteEmployeeById">
+        DELETE
+        FROM employee
+        WHERE id IN (${ids});
+    </delete>
+
+    <!--动态查询员工信息-->
+    <select id="getEmployeeData" resultType="Employee">
+        SELECT *
+        FROM employee
+        <where>
+            <if test="id != null and id != ''">
+                AND id = #{id}
+            </if>
+            <if test="name != null and name != ''">
+                AND name = #{name}
+            </if>
+            <if test="identityID != null and identityID != ''">
+                AND identityID = #{identityID}
+            </if>
+        </where>
+    </select>
+
+</mapper>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--名称空间-->
+<mapper namespace="cn.twopair.mappers.CustomerMapper">
+
+    <!--通过手机号查询id-->
+    <select id="selectIdByTelphone" resultType="java.lang.Integer">
+        SELECT id
+        FROM customer
+        WHERE tel = #{tel};
+    </select>
+
+    <!--新增一个客户-->
+    <insert id="addOneCustomer">
+        INSERT INTO customer(name, sex, tel, base)
+        VALUES (#{name}, #{sex}, #{tel}, #{base});
+    </insert>
+
+    <!--修改某客户信息-->
+    <update id="mergeOneCustomer">
+        UPDATE customer
+        SET name = #{name},
+            sex  = #{sex},
+            tel  = #{tel},
+            base = #{base}
+        WHERE id = #{id};
+    </update>
+
+    <!--删除客户信息（支持多行删除）-->
+    <delete id="deleteCustomerById">
+        DELETE
+        FROM customer
+        WHERE id IN (${ids});
+    </delete>
+
+    <!--动态查询客户信息-->
+    <select id="getCustomerData" resultType="customer">
+        SELECT *
+        FROM customer
+        <where>
+            <if test="id != null and id != ''">
+                AND id = #{id}
+            </if>
+            <if test="name != null and name != ''">
+                AND name = #{name}
+            </if>
+            <if test="tel != null and tel != ''">
+                AND tel = #{tel}
+            </if>
+        </where>
+    </select>
+</mapper>

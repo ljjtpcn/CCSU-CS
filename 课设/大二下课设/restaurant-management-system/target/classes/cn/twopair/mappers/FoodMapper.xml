@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--名称空间-->
+<mapper namespace="cn.twopair.mappers.FoodMapper">
+
+    <insert id="addOneFood" parameterType="cn.twopair.pojo.Food">
+        INSERT INTO food(name, categoryId, price, `describe`, status, sum, filePath)
+        VALUES (#{food.name},
+                #{food.categoryId},
+                #{food.price},
+                #{food.describe},
+                #{food.status},
+                #{food.sum},
+                #{food.filePath})
+    </insert>
+
+    <delete id="deleteFoodById">
+        DELETE
+        FROM food
+        WHERE id IN (${ids})
+    </delete>
+
+    <!--动态查询菜品信息-->
+    <select id="getFoodData" resultType="Food">
+        SELECT *
+        FROM food
+        <where>
+            <if test="id != null and id != ''">
+                ANd id = #{id}
+            </if>
+            <if test="name != null and name != ''">
+                AND name like CONCAT('%', #{name}, '%')
+            </if>
+            <if test="status != null and status != ''">
+                AND status = #{status}
+            </if>
+            <if test="categoryId != null and categoryId != '' and categoryId != 'null'">
+                AND categoryId = #{categoryId}
+            </if>
+        </where>
+    </select>
+
+    <update id="mergeOneFood" parameterType="cn.twopair.pojo.Food">
+        UPDATE food
+        SET name       = #{food.name},
+            categoryId = #{food.categoryId},
+            price      = #{food.price},
+            `describe` = #{food.describe},
+            status     = #{food.status},
+            sum        = #{food.sum},
+            filePath   = #{food.filePath}
+        WHERE id = #{food.id}
+    </update>
+</mapper>

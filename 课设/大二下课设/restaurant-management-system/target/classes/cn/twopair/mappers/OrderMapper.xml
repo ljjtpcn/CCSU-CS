@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--名称空间-->
+<mapper namespace="cn.twopair.mappers.OrderMapper">
+
+    <insert id="insertOrder" parameterType="Order">
+        INSERT INTO `order`
+        VALUES (#{order.orderNo},
+                #{order.deskId},
+                #{order.createTime},
+                #{order.money},
+                #{order.customerId},
+                #{order.status},
+                #{order.number})
+    </insert>
+
+
+    <select id="getOrderData" parameterType="Order" resultType="cn.twopair.pojo.Order">
+        SELECT *
+        FROM `order`
+        <where>
+            <if test="order.orderNo != null and order.orderNo != ''">
+                and orderNo = #{order.orderNo}
+            </if>
+            <if test="order.deskId != null">
+                and deskId = #{order.deskId}
+            </if>
+            <if test="order.status != null and order.status != ''">
+                and status = #{order.status}
+            </if>
+        </where>
+        ORDER BY createTime Desc;
+    </select>
+
+
+    <!--获取本年度四季度销售统计数据-->
+    <parameterMap id="getSellStatisticsMap" type="java.util.Map">
+        <parameter property="one" mode="OUT" jdbcType="DOUBLE"/>
+        <parameter property="two" mode="OUT" jdbcType="DOUBLE"/>
+        <parameter property="three" mode="OUT" jdbcType="DOUBLE"/>
+        <parameter property="four" mode="OUT" jdbcType="DOUBLE"/>
+    </parameterMap>
+    <select id="getStatisticsData" parameterMap="getSellStatisticsMap" statementType="CALLABLE">
+        CALL getSellStatisticsData(?, ?, ?, ?);
+    </select>
+
+</mapper>
